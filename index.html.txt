@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rexor Ibe – Virtual Assistant, Research Analyst, and Lead Generation Specialist." />
+  <meta name="keywords" content="Virtual Assistant, Research Analyst, Lead Generation, Portfolio" />
+  <meta name="author" content="Rexor Ibe" />
+  <title>Rexor Ibe | Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #333;
+      --card: #ffffff;
+      --primary: #0f172a;
+      --secondary: #020617;
+    }
+
+    body.dark {
+      --bg: #020617;
+      --text: #e5e7eb;
+      --card: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 { font-size: 2.2rem; }
+    header p { margin-top: 0.5rem; font-size: 1rem; }
+
+    nav {
+      background: var(--secondary);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      padding: 0.8rem;
+    }
+
+    nav a, nav button {
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 { color: var(--primary); margin-bottom: 1rem; }
+
+    .about p { max-width: 750px; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .cv-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .socials a {
+      margin-right: 1rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    form {
+      max-width: 600px;
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    form label { display: block; margin-top: 1rem; font-weight: bold; }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.4rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      margin-top: 1.2rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--secondary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rexor Ibe</h1>
+  <p>VIRTUAL ASSISTANT | RESEARCH ANALYST | LEAD GENERATION</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+  <button onclick="toggleDark()">Dark Mode</button>
+</nav>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a results-driven Virtual Assistant and Research Analyst specializing in lead generation, data research, and administrative support. I help businesses save time, improve efficiency, and convert data into actionable insights.
+  </p>
+  <a class="cv-btn" href="cv.pdf" download>Download CV</a>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Virtual Assistance</h3>
+      <p>Email management, scheduling, CRM updates, and administrative support to keep operations running smoothly.</p>
+    </div>
+    <div class="card">
+      <h3>Research & Analysis</h3>
+      <p>Market research, competitor analysis, data collection, and reporting with high accuracy.</p>
+    </div>
+    <div class="card">
+      <h3>Lead Generation</h3>
+      <p>Targeted lead sourcing, list building, and data validation to help grow your sales pipeline.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Connect With Me</h2>
+  <div class="socials">
+    <a href="#">LinkedIn</a>
+    <a href="#">Upwork</a>
+    <a href="#">Email</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <label>Name</label>
+    <input type="text" name="name" required />
+
+    <label>Email</label>
+    <input type="email" name="email" required />
+
+    <label>Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Rexor Ibe. All rights reserved.
+</footer>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
